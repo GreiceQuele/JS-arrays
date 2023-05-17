@@ -4,8 +4,14 @@ const listaDeAlunosEMedia = [alunos, medias];
 
 function exibeNomeENota (aluno) {
     if(listaDeAlunosEMedia[0].includes(aluno)) {
-        const indice = listaDeAlunosEMedia[0].indexOf(aluno);
-        const mediaDoAluno = listaDeAlunosEMedia[1][indice];
+        //const alunos = listaDeAlunosEMedia[0];
+        //const medias = listaDeAlunosEMedia[1];
+
+        const[alunos, medias] = listaDeAlunosEMedia;
+
+        const indice = alunos.indexOf(aluno);
+
+        const mediaDoAluno = medias[indice];
 
         console.log(`${aluno}, tem a média final ${mediaDoAluno}.`);
 
@@ -15,4 +21,4 @@ function exibeNomeENota (aluno) {
     }
 }
 
-exibeNomeENota('João');
+exibeNomeENota('Ana');
